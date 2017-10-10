@@ -3,10 +3,10 @@
 
 ### 索引
 * [初次使用SDK](#初次使用SDK)
-  * [使用 Java SDK](#使用 Java SDK)
-  * [使用 Python SDK](#使用 Python SDK)
+  * [使用 Java SDK](#使用Java-SDK)
+  * [使用 Python SDK](#使用Python-SDK)
 * [常见的使用场景](#主要的数据结构和成员变量)
-  * [创建人物和人脸数据库（底库）](#创建人物和人脸数据库（底库）)
+  * [创建人物和人脸数据库](#创建人物和人脸数据库)
   * [人脸识别](#人脸识别)
   * [人脸对比](#人脸对比)
 
@@ -23,7 +23,7 @@
 ## 初次使用SDK
 ***
 
-#### 使用 Java SDK
+#### 使用Java-SDK
 
 import SDK所需的库文件
 ```
@@ -41,7 +41,7 @@ public static final String API_KEY = "your API key ";
 public static final String API_SECRET = "your API secret";
 ```
 
-#### 使用 Python SDK
+#### 使用Python-SDK
 
 `git clone https://github.com/SnowSense/python-sdk.git` 后，python-sdk目录下主要文件说明
 ```
@@ -65,9 +65,9 @@ demo_app.py		SDK的API函数在典型场景下的使用示例
 ## 常见的使用场景
 ***
 
-#### 创建人物和人脸数据库（底库）
+#### 创建人物和人脸数据库
 
-使用场景：在初次创建底库或后续向底库中增加人物时使用
+使用场景：在初次创建人脸数据库(底库)或后续向底库中增加人物时使用
 说明：每个API key 对应一个独立的底库
 
 步骤：
