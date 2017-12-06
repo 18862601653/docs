@@ -58,7 +58,7 @@ payload是一个json字符串，有传URL和Base64 encoded两种的格式。
 
 curl 使用例子说明：
 ```
-HOST="bj.xuecong.co:8653"
+HOST="yourhostname:port"
 
 curl -X POST  -H "Content-Type: application/json" -d '{"images": [{"url": "http://i3.bbswater.fd.zol-img.com.cn/t_s1200x5000/g5/M00/01/0E/ChMkJ1ZNu6uIGENLAA-gXhD2jzcAAFG1gNG2GgAD6B2489.jpg"}]}' "http://$HOST/api/imgclassify/antiporn"
 ```
@@ -104,7 +104,7 @@ curl -X POST  -H "Content-Type: application/json" -d '{"images": [{"url": "http:
 curl 使用例子说明：
 
 ```
-HOST="bj.xuecong.co:8653"
+HOST="yourhostname:port"
 curl -X POST -F "video=@/path/to/your/test.mp4" -F "format=mp4" "http://$HOST/api/videoclassify/antiporn"
 ```
 
@@ -128,6 +128,6 @@ curl -X POST -F "video=@/path/to/your/test.mp4" -F "format=mp4" "http://$HOST/ap
 curl 使用例子说明：
 
 ```
-HOST="bj.xuecong.co:8653"
+HOST="yourhostname:port"
 curl -X POST "http://$HOST/api/resetcache"
 ```

@@ -59,7 +59,7 @@ payload是一个json字符串，有传URL和Base64 encoded两种的格式。
 
 curl 使用例子说明：
 ```
-HOST="bj.xuecong.co:8652"
+HOST="yourhostname:port"
 curl -X POST "http://$HOST/api/imgclassify/scene?img_uri=http://i3.bbswater.fd.zol-img.com.cn/t_s1200x5000/g5/M00/01/0E/ChMkJ1ZNu6uIGENLAA-gXhD2jzcAAFG1gNG2GgAD6B2489.jpg"
 
 echo "or POST request in payload format"
@@ -105,7 +105,7 @@ curl -X POST  -H "Content-Type: application/json" -d '{"images": [{"url": "https
 curl 使用例子说明：
 
 ```
-HOST="bj.xuecong.co:8652"
+HOST="yourhostname:port"
 curl -o test.jpg -X POST "http://$HOST/api/img/heic2jpg?img_uri=https://raw.githubusercontent.com/SnowSense/archive/master/test/ios.heic"
 ```
 
@@ -211,7 +211,7 @@ EXIF信息简要说明如下，详细信息请参考 EXIF工业标准(JEITA CP-3
 curl 使用例子说明：
 
 ```
-HOST="bj.xuecong.co:8652"
+HOST="yourhostname:port"
 curl -X POST "http://$HOST/api/img/getexif?img_uri=https://raw.githubusercontent.com/SnowSense/archive/master/ios2.jpg"
 
 echo "or POST a payload"
@@ -239,6 +239,6 @@ curl -X POST  -H "Content-Type: application/json" -d '{"images": [{"url": "https
 curl 使用例子说明：
 
 ```
-HOST="bj.xuecong.co:8652"
+HOST="yourhostname:port"
 curl -X POST "http://$HOST/api/resetcache"
 ```
