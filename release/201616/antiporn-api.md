@@ -105,7 +105,7 @@ curl 使用例子说明：
 
 ```
 HOST="yourhostname:port"
-curl -X POST -F "video=@/path/to/your/test.mp4" -F "format=mp4" "http://$HOST/api/videoclassify/antiporn"
+curl -X POST -F "video=@/path/to/your/test.mp4" "http://$HOST/api/videoclassify/antiporn?format=mp4"
 ```
 
 ## 清空服务端的临时文件夹
