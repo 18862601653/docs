@@ -6,7 +6,7 @@
 
 描述：检查一张或多张照片，是否有色情内容
 
-调用URL: /api/imgclassify/antiporn
+调用URL: /api/dbg/imgclassify/antiporn
 
 调用方法: POST
 
@@ -36,14 +36,14 @@ payload是一个json字符串，有传URL和Base64 encoded两种的格式。
 
 |字段|  类型| 说明
 |:------------| :------------|:-------------|
-| results | string array | 请求成功时才会返回改字段；一个字符串数组，显示了图片检测的结果；数组元素的次序和请求中的次序一致 |
+| results | map<string,array> | 请求成功时才会返回该字段；一个scores数组，显示了图片检测的分数，一个tags数组，表示图片的检测结果；数组元素的次序和请求中的次序一致 |
 | error | string | 当请求失败时才会返回此字符串，具体返回内容见后续错误信息章节。否则此字段不存在。 |
 
 - 返回值示例：
 
 ```
 返回正确：
-{"results": ["normal", "normal", "porn"]
+{"results":{"scores"=[0.0034683231730014206, 0.5220495405484687], "tags"=["normal", "normal"]}}
 返回错误：
 { "error": "Invalid payload input." }
 ```
@@ -60,7 +60,7 @@ curl 使用例子说明：
 ```
 HOST="yourhostname:port"
 
-curl -X POST  -H "Content-Type: application/json" -d '{"images": [{"url": "http://i3.bbswater.fd.zol-img.com.cn/t_s1200x5000/g5/M00/01/0E/ChMkJ1ZNu6uIGENLAA-gXhD2jzcAAFG1gNG2GgAD6B2489.jpg"}]}' "http://$HOST/api/imgclassify/antiporn"
+curl -X POST  -H "Content-Type: application/json" -d '{"images": [{"url": "http://i3.bbswater.fd.zol-img.com.cn/t_s1200x5000/g5/M00/01/0E/ChMkJ1ZNu6uIGENLAA-gXhD2jzcAAFG1gNG2GgAD6B2489.jpg"}]}' "http://$HOST/api/dbg/imgclassify/antiporn"
 ```
 
 ## 视频审核
