@@ -157,7 +157,7 @@ EXIF信息简要说明如下，详细信息请参考 EXIF工业标准(JEITA CP-3
 |字段|  类型| 说明
 |:------------| :------------|:-------------|
 | DateTime | string | 拍摄日期和时间  |
-| GPSInfo | string |  GPS原始信息 |
+| GPSInfo | map<string,object> |  GPS原始信息 |
 | GPSLatitude | float | 从GPS原始信息中转换成浮点数的经纬度坐标 |
 | GPSLongitude |float |从GPS原始信息中转换成浮点数的经纬度坐标 |
 | Make | string |相机制造商|
